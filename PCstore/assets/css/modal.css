@@ -1,0 +1,103 @@
+.modal,
+.modal-cus_add,
+.modal-staff_add,
+.modal-product_add,
+.bill-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 99;
+    display: grid;
+    place-items: center;
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 400px;
+    height: 50%;
+    border-radius: 10px;
+}
+
+/* Modal Header CSS */
+.modal-header {
+    position: relative;
+    background-image: radial-gradient(ellipse, #00B4DB, #0083B0);
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+.header-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    opacity: .7;
+}
+.header-icon:hover {
+    opacity: 1;
+    transition: .5s linear;
+}
+
+.header-title {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Modal Body CSS */
+.modal-body {
+    padding: 36px;
+}
+
+.modal-body{
+    display: grid;
+    place-items: center;
+}
+
+.modal-lable {
+    display: block;
+    padding: 20px 0 10px 0;
+    margin-left: -10px;
+    font-size: 18px;
+}
+
+.modal-input {
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.user-form .modal-input {
+    border: 1px solid #ccc;
+    pointer-events: none;
+}
+
+.modal-btn {
+    margin-top: 28px;
+    background-image: radial-gradient(ellipse, #00B4DB, #0083B0);
+    color: #fff;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: .8;
+    border-radius: 5px;
+}
+.modal-btn:hover {
+    opacity: 1;
+    transition: .3s linear;
+}
+
+/* Validate CSS */
+.invalid-input {
+    border: 1px solid red;
+}
+.modal-error,
+.add_staff-error,
+.add_product-error,
+.cus-error {
+    color: red;
+    font-size: small;
+}

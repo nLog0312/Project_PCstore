@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="./assets/css/styleSideBar.css">
+    <link rel="stylesheet" href="./assets/css/styleContent.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/modalEdit.css">
+</head>
+<body>
+    <div class="main">
+        <!-- Menu Side Bar -->
+        <div class="menu">
+            <ul>
+                <li id="Dashboard" class="item active">
+                    <i class="fa-solid fa-house-user"></i>
+                    <a href="#">Home</a>
+                </li>
+
+                <li id="Customer" class="item">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="#">Customers</a>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <ul id="cus-dropdow">
+                        <li><a href="#">List Customer</a></li>
+                        <li><a href="#">Edit Customer</a></li>
+                        <li><a href="#">Warranty Card</a></li>
+                    </ul>
+                </li>
+
+                <li id="Staff" class="item">
+                    <i class="fa-solid fa-clipboard-user"></i>
+                    <a href="#">Staffs</a>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <ul>
+                        <li><a href="#">List Staff</a></li>
+                        <li><a href="#">Add Staff</a></li>
+                        <li><a href="#">Edit Staff</a></li>
+                    </ul>
+                </li>
+
+                <li id="Product" class="item">
+                    <i class="fa-solid fa-shirt"></i>
+                    <a href="#">Products</a>
+                </li>
+
+                <li id="Warehouse" class="item">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <a href="#">Warehouse</a>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <ul>
+                        <li><a href="#">Add Product</a></li>
+                        <li><a href="#">Edit Product</a></li>
+                    </ul>
+                </li>
+
+                <li id="Invoice" class="item">
+                    <i class="fa-solid fa-money-bill"></i>
+                    <a href="#">Invoice</a>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <ul>
+                        <li><a href="#">Receipt</a></li>
+                        <li><a href="#">Billing</a></li>
+                    </ul>
+                </li>
+
+                <li id="Statistic" class="item">
+                    <i class="fa-sharp fa-solid fa-file-lines"></i>
+                    <a href="#">Statistic</a>
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <ul>
+                        <li><a href="#">Total Revenue</a></li>
+                        <li><a href="#">Revenue Report</a></li>
+                    </ul>
+                </li>
+
+                <div id="action" class=""></div>
+                <i id="arrow-icon" class="fa-solid fa-caret-left"></i>
+            </ul>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="content-title">
+                <h1>Home</h1>
+            </div>
+
+            <div class="content-description">
+                <div class="body-clock">
+                    <div class="clock">
+                        <div class="hr">
+                            <div class="strip">
+                                <div class="number">0</div>
+                                <div class="number">1</div>
+                                <div class="number">2</div>
+                            </div>
+                            <div class="strip">
+                                <div class="number">0</div>
+                                <div class="number">1</div>
+                                <div class="number">2</div>
+                                <div class="number">3</div>
+                                <div class="number">4</div>
+                                <div class="number">5</div>
+                                <div class="number">6</div>
+                                <div class="number">7</div>
+                                <div class="number">8</div>
+                                <div class="number">9</div>
+                            </div>
+                        </div>
+                        <div class="min">
+                            <div class="strip">
+                                <div class="number">0</div>
+                                <div class="number">1</div>
+                                <div class="number">2</div>
+                                <div class="number">3</div>
+                                <div class="number">4</div>
+                                <div class="number">5</div>
+                            </div>
+                            <div class="strip">
+                                <div class="number">0</div>
+                                <div class="number">1</div>
+                                <div class="number">2</div>
+                                <div class="number">3</div>
+                                <div class="number">4</div>
+                                <div class="number">5</div>
+                                <div class="number">6</div>
+                                <div class="number">7</div>
+                                <div class="number">8</div>
+                                <div class="number">9</div>
+                            </div>
+                        </div>
+                        <div class="sec">
+                            <div class="strip">
+                                <div class="number">0</div>
+                                <div class="number">1</div>
+                                <div class="number">2</div>
+                                <div class="number">3</div>
+                                <div class="number">4</div>
+                                <div class="number">5</div>
+                            </div>
+                            <div class="strip">
+                                <div class="number">0</div>
+                                <div class="number">1</div>
+                                <div class="number">2</div>
+                                <div class="number">3</div>
+                                <div class="number">4</div>
+                                <div class="number">5</div>
+                                <div class="number">6</div>
+                                <div class="number">7</div>
+                                <div class="number">8</div>
+                                <div class="number">9</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="content-para"></p>
+
+                <!-- Customer -->
+                <!-- List Customer Here -->
+                <div class="list-customer content-hidden">
+                    <table>
+                        <tr>
+                            <td>
+                                <table style="width: calc(100% + 5px); margin-left: -5px;">
+                                    <tr style="color:white;background-color:grey">
+                                        <th>STT</th>
+                                        <th class="width-20">Name</th>
+                                        <th>Address</th>
+                                        <th class="width-20">Phone</th>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="table-cus" style="width:calc(100% + 5px); height:500px; overflow:auto; margin-left: -5px;">
+                                    <table style="width: 100%;">
+                                        
+                                    </table>  
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- UI Edit Customer Here -->
+                <div class="edit-customer content-hidden">
+                    <table>
+                        <tr>
+                            <td>
+                                <table style="width: calc(100% + 5px); margin-left: -5px;">
+                                    <tr style="color:white;background-color:grey">
+                                        <th>STT</th>
+                                        <th class="width-20">Name</th>
+                                        <th>Address</th>
+                                        <th class="width-20">Phone</th>
+                                        <th style="width: 4.5%;"></th>
+                                        <th style="width: 4.5%;"></th>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="table-cus_edit" style="width:calc(100% + 5px); height:500px; overflow:auto; margin-left: -5px;">
+                                    <table style="width: 100%;">
+                                        
+                                    </table>  
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="modal-cus_add modal-hidden">
+                    <div class="modal-cus_container">
+                        <header class="modal-header">
+                            <div class="header-icon">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+            
+                            <div class="header-title">
+                                <h3>Edit Customer</h3>
+                            </div>
+                        </header>
+                        <div class="modal-cus_body">
+                            <table>
+                                
+                            </table>
+                            <button id="btn-cus_submit">Submit</button>
+                            <div class="edit-cus_message"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Warranty Card -->
+                <div class="warranty-customer content-hidden">
+                    <table>
+                        <tr>
+                            <td>
+                                <table style="width: calc(100% + 5px); margin-left: -5px;">
+                                    <tr style="color:white;background-color:grey">
+                                        <th>STT</th>
+                                        <th class="width-20">Customer Name</th>
+                                        <th class="width-20">Phone</th>
+                                        <th>Product</th>
+                                        <th class="width-20">Warranty Period</th>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="table-warranty" style="width:calc(100% + 5px); height:500px; overflow:auto; margin-left: -5px;">
+                                    <table style="width: 100%;">
+                                        
+                                    </table>  
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Staffs -->
+                <!-- List Staff Here -->
+                <div class="list-staff content-hidden">
+                    <table>
+                        <tr>
+                            <td>
+                                <table style="width: calc(100% + 5px); margin-left: -5px;">
+                                    <tr style="color:white;background-color:grey">
+                                        <th>STT</th>
+                                        <th class="width-20">Name</th>
+                                        <th>Address</th>
+                                        <th style="width: 15%;">Phone</th>
+                                        <th class="width-4">Age</th>
+                                        <th class="width-12">Position</th>
+                                        <th class="width-12">Salary</th>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="table-staff" style="width:calc(100% + 5px); height:500px; overflow:auto; margin-left: -5px;">
+                                    <table style="width: 100%;">
+                                        
+                                    </table>  
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- UI Add Staff Here -->
+                <div class="add-staff content-hidden">
+                    <div class="form-add_staff">
+                        <div class="form-group">
+                            <h3>Enter Information Staff</h3>
+                            <div class="enter-form" style="width: 304px; height: 503px; overflow: auto;">
+                                <label>Name: </label>
+                                <input type="text" name="name_staff">
+                                <div class="add_staff-error"></div>
+                                <label>Address: </label>
+                                <input type="text" name="address">
+                                <div class="add_staff-error"></div>
+                                <label>Phone: </label>
+                                <input type="text" name="phone">
+                                <div class="add_staff-error"></div>
+                                <label>Age: </label>
+                                <input type="number" name="age">
+                                <div class="add_staff-error"></div>
+                                <label>Position: </label>
+                                <select style="border-radius: 5px; border: 1px solid #ccc; padding: 10px; background-color: rgba(128, 128, 128, 0.2); color: #fff;" name="position">
+                                    <option style="background-color: rgba(128, 128, 128, 0.2); color: #000;" value="1">Manager</option>
+                                    <option style="background-color: rgba(128, 128, 128, 0.2); color: #000;" value="2">Staff</option>
+                                </select>
+                                <label>Salary: </label>
+                                <input type="number" name="salary">
+                                <div class="add_staff-error"></div>
+                                <label>Link Image: </label>
+                                <input type="text" name="image">
+                                <div class="add_staff-error"></div>
+                                <div class="submit-btn" type="submit">Add</div>
+                            </div>
+                            <div class="add_staff-message"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- UI Edit Staff Here -->
+                <div class="edit-staff content-hidden">
+                    <table>
+                        <tr>
+                            <td>
+                                <table style="width: calc(100% + 5px); margin-left: -5px;">
+                                    <tr style="color:white;background-color:grey">
+                                        <th>STT</th>
+                                        <th class="width-20">Name</th>
+                                        <th>Address</th>
+                                        <th style="width: 15%;">Phone</th>
+                                        <th class="width-4">Age</th>
+                                        <th class="width-12">Position</th>
+                                        <th class="width-12">Salary</th>
+                                        <th style="width: 4.5%;"></th>
+                                        <th style="width: 4.5%;"></th>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="table-staff_edit" style="width:calc(100% + 5px); height:500px; overflow:auto; margin-left: -5px;">
+                                    <table style="width: 100%;">
+                                        
+                                    </table>  
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="modal-staff_add modal-hidden">
+                    <div class="modal-staff_container">
+                        <header class="modal-header">
+                            <div class="header-icon">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+            
+                            <div class="header-title">
+                                <h3>Edit Staff</h3>
+                            </div>
+                        </header>
+                        <div class="modal-staff_body">
+                            <table>
+                            </table>
+                            <button id="btn-staff_submit">Submit</button>
+                            <div class="edit-staff_message"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product -->
+                <div class="list-product content-hidden">
+                    <table>
+                        <tr>
+                            <td>
+                                <table style="width: calc(100% + 5px); margin-left: -5px;">
+                                    <tr style="color:white;background-color:grey">
+                                        <th>STT</th>
+                                        <th>Product Name</th>
+                                        <th style="width: 30%;">Image</th>
+                                        <th class="width-12">Quantity</th>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="table-product" style="width:calc(100% + 5px); height:500px; overflow:auto; margin-left: -5px;">
+                                    <table style="width: 100%;">
+                                        
+                                    </table>  
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- WareHouse -->
+                <!-- UI Add Product Here -->
+                <div class="add-product content-hidden">
+                    <div class="form-add_product">
+                        <div class="form-group">
+                            <h3>Enter Information Product</h3>
+                            <div class="enter-form">
+                                <label>Name: </label>
+                                <input type="text" name="name_product">
+                                <div class="add_product-error"></div>
+                                <label>Price: </label>
+                                <input type="number" name="price">
+                                <div class="add_product-error"></div>
+                                <label>Link Image: </label>
+                                <input type="text" name="image">
+                                <div class="add_product-error"></div>
+                                <label>Quantity: </label>
+                                <input type="number" name="quantity">
+                                <div class="add_product-error"></div>
+                                <div class="submit-btn" type="submit">Add</div>
+                            </div>
+                            <div class="add_product-message"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- UI Edit Product Here -->
+                <div class="edit-product content-hidden">
+                    <table>
+                        <tr>
+                            <td>
+                                <table style="width: calc(100% + 5px); margin-left: -5px;">
+                                    <tr style="color:white;background-color:grey">
+                                        <th>STT</th>
+                                        <th>Product Name</th>
+                                        <th style="width: 30%;">Image</th>
+                                        <th class="width-12">Quantity</th>
+                                        <th style="width: 4.5%;"></th>
+                                        <th style="width: 4.5%;"></th>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="table-product_edit" style="width:calc(100% + 5px); height:500px; overflow:auto; margin-left: -5px;">
+                                    <table style="width: 100%;">
+                                        
+                                    </table>  
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="modal-product_add modal-hidden">
+                    <div class="modal-product_container">
+                        <header class="modal-header">
+                            <div class="header-icon">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+            
+                            <div class="header-title">
+                                <h3>Edit Staff</h3>
+                            </div>
+                        </header>
+                        <div class="modal-product_body">
+                            <table>
+                                
+                            </table>
+                            <button id="btn-product_submit">Submit</button>
+                            <div class="edit-product_message"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Invoice -->
+                <!-- UI Add Receipt Here -->
+                <div class="add-receipt content-hidden">
+                    <div class="form-add_receipt">
+                        <div class="form-group">
+                            <h3>Enter Receipt</h3>
+                            <div class="enter-form">
+                                <div class="form-cus">
+                                    <h4>
+                                        <span class="mar-right-8">
+                                            <i class="fa-sharp fa-solid fa-circle-dot"></i>
+                                        </span>
+                                        Customer
+                                    </h4>
+                                    <label>Name: </label>
+                                    <input type="text" name="name_customer">
+                                    <p class="cus-error"></p>
+                                    <label>Address: </label>
+                                    <input type="text" name="address">
+                                    <p class="cus-error"></p>
+                                    <label>Phone: </label>
+                                    <input type="text" name="phone">
+                                    <div class="cus-error"></div>
+
+                                    <h4 style="margin-top: 15px;">
+                                        <span class="mar-right-8">
+                                            <i class="fa-sharp fa-solid fa-circle-dot"></i>
+                                        </span>
+                                        Staff
+                                    </h4>
+                                    <table style="margin-top: 10px;">
+                                        <tr>
+                                            <td>
+                                                <table style="width: calc(100% + 5px); margin-left: -5px;">
+                                                    <tr style="color:white;background-color:grey">
+                                                        <th style="width: 10%;"></th>
+                                                        <th style="width: 30%;">Image</th>
+                                                        <th>Staff Name</th>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                
+                                        <tr>
+                                            <td>
+                                                <div class="table-receipt_staff" style="width:calc(100% + 5px); height:150px; overflow:auto; margin-left: -5px;">
+                                                    <table style="width: 100%;">
+                                                        
+                                                    </table>  
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="form-product">
+                                    <h4>
+                                        <span class="mar-right-8">
+                                            <i class="fa-sharp fa-solid fa-circle-dot"></i>
+                                        </span>
+                                        Product
+                                    </h4>
+                                    <div class="list-product_add">
+                                        <table style="height:100%;">
+                                            <tr>
+                                                <td>
+                                                    <table style="width: calc(100% + 5px); margin-left: -5px;height:100%;">
+                                                        <tr style="color:white;background-color:grey">
+                                                            <th></th>
+                                                            <th style="width: 30%;">Image</th>
+                                                            <th>Product Name</th>
+                                                            <th style="width: 17%;">Date</th>
+                                                            <th class="width-12">Quantity</th>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                    
+                                            <tr style="height: 100%;">
+                                                <td>
+                                                    <div class="table-receipt_product" style="width:calc(100% + 5px); height:100%; overflow:auto; margin-left: -5px;">
+                                                        <table style="width: 100%;">
+                                                            
+                                                        </table>  
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="submit-btn" type="submit">Add</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bill Here -->
+                <div class="list-bill content-hidden">
+                    <table>
+                        <tr>
+                            <td>
+                                <table style="width: calc(100% + 5px); margin-left: -5px;">
+                                    <tr style="color:white;background-color:grey">
+                                        <th>STT</th>
+                                        <th style="width: 30%;">Name</th>
+                                        <th style="width: 20%;">Phone</th>
+                                        <th>Address</th>
+                                        <th style="width: 5%;"></th>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="table-list-bill" style="width:calc(100% + 5px); height:500px; overflow:auto; margin-left: -5px;">
+                                    <table style="width: 100%;">
+                                        
+                                    </table>  
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="bill-content modal-hidden">
+                    <div class="bill-detail">
+                        <div class="bill-header">
+                            <div class="bill-header-left">
+                                <div class="bill-title">
+                                    <h3>Bill</h3>
+                                    <div class="icon"><i class="fa-solid fa-xmark"></i></div>
+                                </div>
+                                <p>Staff Name: <span id="staff-name"></span></p>
+                                <p>Customer ID: <span id="customer-id"></span></p>
+                                <p>Date: <span id="date"></span></p>
+                            </div>
+                            <div class="bill-header-right">
+                                <div class="bill-title">
+                                    <h3>Customer</h3>
+                                </div>
+                                <p>Name: <span id="customer-name"></span></p>
+                                <p>Address: <span id="customer-address"></span></p>
+                                <p>Phone: <span id="customer-phone"></span></p>
+                            </div>
+                        </div>
+                        <div class="bill-body">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <table style="width: calc(100% + 5px); margin-left: -5px;">
+                                            <tr style="color:white;background-color:grey">
+                                                <th>STT</th>
+                                                <th>Product Name</th>
+                                                <th class="width-20">Price</th>
+                                                <th class="width-12">Quantity</th>
+                                                <th class="width-20">Total</th>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+        
+                                <tr>
+                                    <td>
+                                        <div class="table-bill" style="width:calc(100% + 5px); height:240px; overflow:auto; margin-left: -5px;">
+                                            <table style="width: 100%;">
+                                                
+                                            </table>  
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="bill-footer">
+                            <div class="bill-footer-right">
+                                <h3>Total</h3>
+                                <p>Total: <span id="total"></span><i class="fa-solid fa-dollar-sign"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistic -->
+                <!-- Total Revenue Here -->
+                <div class="total-revenue content-hidden">
+                    <div class="total-revenue-header">
+                        <h3>Total Revenue</h3>
+                    </div>
+                    <div class="total-revenue-body" style="margin: 15px 0;">
+                        <table>
+                            <tr>
+                                <td>
+                                    <table style="width: calc(100% + 5px); margin-left: -5px;">
+                                        <tr style="color:white;background-color:grey">
+                                            <th>STT</th>
+                                            <th class="width-20">Product ID</th>
+                                            <th>Product Name</th>
+                                            <th class="width-12">Quantity Sold</th>
+                                            <th class="width-12">Total</th>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td>
+                                    <div class="table-revenue" style="width:calc(100% + 5px); height:400px; overflow:auto; margin-left: -5px;">
+                                        <table style="width: 100%;">
+                                            
+                                        </table>  
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="total-revenue-footer">
+                        <div class="total-revenue-footer-right">
+                            <h3>Total</h3>
+                            <p>Total: <span id="total-revenue"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Revenue Report Here -->
+                <div class="revenue-report content-hidden">
+                    <h3>Revenue Report</h3>
+                    <canvas id="canvas" style="background-color: rgba(0, 0, 0, 0.3);"></canvas>
+                    <div class="submit-btn" type="submit">
+                        <a href="mailto:nlog021203@gmail.com">Send to Boss</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal modal-hidden">
+        <div class="modal-container">
+            <header class="modal-header">
+                <div class="header-icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+                <div class="header-title">
+                    <h1>Login</h1>
+                </div>
+            </header>
+            <div class="modal-body">
+                <div class="user-form">
+                    <label class="modal-lable">
+                        <i class="fa-solid fa-user"></i>
+                        User
+                    </label>
+                    <input class="modal-input" type="text" placeholder="Admin" Readonly>
+                </div>
+                <div class="pass-form">
+                    <label for="pass" class="modal-lable">
+                        <i class="fa-solid fa-lock"></i>
+                        Password
+                    </label>
+                    <input id="pass" class="modal-input invallid" type="password">
+                </div>
+                <div class="modal-error"></div>
+                <button class="modal-btn">Submit</button>
+                <div class="modal-error"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Javascript Chart -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script type="text/javascript" src="./assets/js/chartRevenue.js"></script>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="./assets/js/scriptSideBar.js"></script>
+    <script type="text/javascript" src="./assets/js/validateModal.js"></script>
+    <script type="text/javascript" src="./assets/js/validateFormAdd.js"></script>
+    <script type="text/javascript" src="./assets/js/descriptionContent.js"></script>
+    <script type="text/javascript" src="./assets/js/scriptContent.js"></script>
+    <script type="text/javascript" src="./assets/js/handleContentWithAPI.js"></script>
+    <script type="text/javascript" src="./assets/js/validateModalEdit.js"></script>
+</body>
+</html>

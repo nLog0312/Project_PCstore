@@ -1,0 +1,103 @@
+
+.modal-hidden {
+    display: none;
+}
+.modal-cus_body,
+.modal-staff_body,
+.modal-product_body {
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    color: black;
+    padding: 50px 70px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-cus_body table,
+.modal-staff_body table,
+.modal-product_body table {
+    border: none;
+    height: 200px;
+}
+.modal-cus_body tr,
+.modal-cus_body td,
+.modal-staff_body tr,
+.modal-staff_body td,
+.modal-product_body tr,
+.modal-product_body td {
+    border: none;
+}
+.modal-cus_body table tr,
+.modal-staff_body table tr {
+    height: 70px;
+}
+.modal-cus_body table input,
+.modal-staff_body table input,
+.modal-product_body table input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#btn-cus_submit,
+#btn-staff_submit,
+#btn-product_submit {
+    margin-top: 28px;
+    background-image: radial-gradient(ellipse, #00B4DB, #0083B0);
+    color: #fff;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: .8;
+    border-radius: 5px;
+    border: none;
+}
+#btn-cus_submit:hover,
+#btn-staff_submit:hover,
+#btn-product_submit:hover {
+    opacity: 1;
+    transition: .3s linear;
+}
+
+/* ----------Bill CSS---------- */
+.bill-content {
+    background-color: rgb(0, 0, 0, 0.8);
+}
+.bill-detail {
+    height: max-content;
+    width: 50%;
+    border-radius: 10px;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: #ccc 1px solid;
+}
+.bill-detail p {
+    margin: 5px 0;
+}
+.bill-detail span {
+    font-size: 20px;
+    margin-left: 15px;
+}
+.bill-content p {
+	margin-left: 20px;
+}
+.bill-header {
+    padding-bottom: 32px;
+}
+.bill-body {
+    height: 300px;
+}
+.bill-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+.bill-title .icon {
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: -55px;
+}
